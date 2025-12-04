@@ -6,11 +6,26 @@
   <title>Exclusive Offer – Unlock Your Reward</title>
   <meta name="description" content="Simple high-conversion CPA landing page. Complete one step to unlock your reward." />
 
-  <!-- ✅ CONTENT LOCKER CODE (ADDED EXACTLY AS YOU SENT) -->
-  <script type="text/javascript">var ogblock=true;</script>
-  <script type="text/javascript" id="ogjs" src="https://Parisgym.xyz/cl/js/82djg3"></script>
-  <script type="text/javascript">if(ogblock) window.location.href = "https://Parisgym.xyz/adblock";</script>
-  <!-- END LOCKER CODE -->
+  <!-- 👇 Smart AdBlock Detection (Fixed Version) -->
+  <script>
+    let ogblock = false;
+
+    // إذا لم يحمل السكريبت خلال 1 ثانية → AdBlock
+    setTimeout(() => {
+      if (!window.__oglocker_loaded) {
+        ogblock = true;
+        window.location.href = "https://Parisgym.xyz/adblock";
+      }
+    }, 1200);
+  </script>
+
+  <!-- Locker Script -->
+  <script id="ogjs" src="https://Parisgym.xyz/cl/js/82djg3"
+    onload="window.__oglocker_loaded = true;"
+    onerror="ogblock = true; window.location.href='https://Parisgym.xyz/adblock'">
+  </script>
+  <!-- END FIX -->
+  
 
   <style>
     :root{
@@ -71,7 +86,6 @@
             </p>
 
             <p style="margin-top:14px;">
-              <!-- DIRECT LOCKER LINK (SAFE & WORKS ON ANY DEVICE) -->
               <a class="btn" href="https://Parisgym.xyz/cl/i/82djg3" target="_blank">Unlock Offer</a>
             </p>
           </div>
